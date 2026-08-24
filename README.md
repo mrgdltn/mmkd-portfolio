@@ -1,6 +1,6 @@
 # 💼 Portfolio | Marga Delatina
 
-Welcome to my personal portfolio! This repository contains the source code for my portfolio website, showcasing my projects, technical skills, and experience across data analytics, development, and digital media.
+Welcome to my personal portfolio! This repository contains the source code for my portfolio website, showcasing my future projects, technical skills, and experience across data analytics, development, and digital media.
 
 🌐 **Live Demo:** [View Live Site](https://mrgdltn.github.io/mmkd-portfolio/)
 
