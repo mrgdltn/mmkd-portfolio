@@ -13,5 +13,5 @@ Welcome to my personal portfolio! This repository contains the source code for m
 ---
 
 ### 📬 Connect With Me
-* **LinkedIn:** [linkedin.com/in/your-profile](https://www.linkedin.com/in/ma-margarita-delatina/)
+* **LinkedIn:** [linkedin.com/in/ma-margarita-delatina/](https://www.linkedin.com/in/ma-margarita-delatina/)
 * **Email:** mrg.delatina@gmail
