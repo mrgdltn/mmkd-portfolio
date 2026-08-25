@@ -1,22 +1,25 @@
-# Operations, Risk & Data Analytics Portfolio Hub
+# 💼 Portfolio | Marga Delatina
 
-Bridging operational precision, regulatory compliance, and data-driven insights[cite: 2]. This repository hosts the live source code, interactive dashboards, SQL scripts, and compliance frameworks for my portfolio[cite: 1, 2].
+Bridging operational precision, regulatory compliance, and data-driven insights[cite: 2]. This repository contains the source code for my interactive portfolio website, showcasing my projects, technical competencies, and operational frameworks across Data Analytics, Trust & Safety, and E-Commerce Operations[cite: 1, 2, 3].
 
----
-
-### Core Tracks & Case Studies
-
-* **Data Analytics & SQL Repository:** Public dataset querying, anomaly detection, cohort analysis, and executive KPI reporting[cite: 1, 2].
-* **Trust, Safety & Compliance Framework:** 3-tier risk escalation protocols, AML/KYC workflows, P2P dispute mediation, and HIPAA/GDPR data masking standards[cite: 1, 2].
-* **Operations Command Center & SLA Dashboard:** Interactive KPI tracking, root-cause investigation logs, and automated resolution turnaround models[cite: 1, 2].
+🌐 **Live Demo:** [View Live Site](https://mrgdelatina.github.io)
 
 ---
 
-### Tech Stack & Core Tools
+### 📂 Featured Tracks & Case Studies
 
-* **Analytics & Querying:** SQL (PostgreSQL / MySQL), Advanced MS Excel (Pivot Tables, VLOOKUP)[cite: 1, 2]
-* **Operations & CRMs:** Salesforce CRM, Zendesk, Discord, Google AI Workspace[cite: 1, 2]
-* **Compliance Standards:** AML/KYC, GDPR Article 17, HIPAA, P2P Escrow Protocols[cite: 1, 2]
+* **Data Analytics & SQL:** Public transactional querying, anomaly detection, cohort filtering, and executive KPI reporting[cite: 1, 2].
+* **Trust, Safety & Compliance:** 3-tier risk escalation protocols, AML/KYC workflows, P2P dispute mediation, and HIPAA/GDPR data protection standards[cite: 1, 2].
+* **Operations & SLA Hub:** Interactive SLA turnaround tracker, root-cause investigation logs, and automated CSAT/QA performance analytics[cite: 1, 2, 3].
+* **Omnichannel CX & De-escalation:** Simulated live chat workflows covering billing disputes, technical checkout bugs, and logistics crisis resolution[cite: 3].
+
+---
+
+### 🚀 Built With & Tech Stack
+
+* **Frontend & UI:** HTML5, Tailwind CSS, Font Awesome, Chart.js[cite: 3]
+* **Analytics & Tooling:** SQL (PostgreSQL/MySQL), Advanced MS Excel (Pivot Tables, VLOOKUP), Salesforce CRM, Zendesk, Google AI Workspace[cite: 1, 2, 3]
+* **Deployment:** GitHub Pages
 
 ---
 
@@ -26,8 +29,8 @@ The datasets, simulated chat logs, incident escalation playbooks, and case studi
 
 ---
 
-### Connect & Contact
+### 📫 Connect With Me
 
+* **LinkedIn:** [linkedin.com/in/ma-margarita-delatina/](https://linkedin.com/in/ma-margarita-delatina/)
 * **Email:** [mrg.delatina@gmail.com](mailto:mrg.delatina@gmail.com)[cite: 1, 2, 3]
-* **WhatsApp / Viber:** +63 966 261 2676[cite: 3]
 * **Location:** Quezon City, Philippines[cite: 1, 2]
