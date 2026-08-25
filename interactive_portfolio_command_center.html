@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marga Delatina | E-Commerce Operations, Risk & Data Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f0c1b',
+                            card: '#1a1528',
+                            cardHover: '#231c36',
+                            border: '#2e2544',
+                            pink: '#f472b6',
+                            pinkLight: '#fbcfe8',
+                            pinkDark: '#db2777',
+                            lavender: '#c084fc',
+                            accent: '#f43f5e',
+                            textMuted: '#94a3b8',
+                            success: '#34d399',
+                            whatsapp: '#25D366',
+                            viber: '#7360f2'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0c1b;
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0c1b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2e2544;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f472b6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 320px;
+            }
+        }
+        .pastel-glow {
+            box-shadow: 0 0 25px -5px rgba(244, 114, 182, 0.25);
+        }
+        .pastel-glow-sm {
+            box-shadow: 0 0 15px -3px rgba(244, 114, 182, 0.15);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fbcfe8 0%, #f472b6 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chat-bubble-agent {
+            background: linear-gradient(135deg, #2d1f3f 0%, #1a1528 100%);
+            border: 1px solid #f472b640;
+        }
+        .chat-bubble-user {
+            background: #231c33;
+            border: 1px solid #2e2544;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-pink selection:text-brand-dark min-h-screen flex flex-col">
+
+    <!-- Chosen Palette: Dark Pastel Lavender & Pink Accent on Midnight Slate (#0f0c1b, #1a1528, #f472b6, #c084fc, #34d399) -->
+    <!-- Application Structure Plan: Integrated E-Commerce CX, Operations Command Center, Simulated Live Chat Logs, Risk SOP Frameworks, SQL Analytics, and Recruiter Pitch Modules into a unified single-page application. Features a sticky blur top navigation, live SLA filtering with Chart.js canvas visualizations, multi-scenario chat simulations, interactive code snippets, and direct recruiter contact channels. -->
+    <!-- Visualization & Content Choices: 
+    1. Operations Command & SLA Tracker -> Interactive Chart.js Canvas charts (Category Res Time & Channel SLA Met/Breached) + Dynamic Filterable Data Table + KPI metrics summary cards.
+    2. Simulated Live Chat Logs -> Interactive Tabbed Chat Simulator displaying real-time customer de-escalation dialogues with sentiment badges and technique annotations.
+    3. De-Escalation & Risk SOP -> Tiered Card System & Step-by-Step Flow Diagrams (Tailwind CSS HTML layout) for KYC/AML, P2P Dispute, and GDPR/HIPAA privacy compliance.
+    4. SQL Technical Toolkit -> Syntax-highlighted code panels with copy-to-clipboard buttons.
+    5. Recruiter Pitch & Experience -> Interactive Persona Toggle (CX Specialist vs Trust & Safety vs Executive Support) with career experience timeline.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Sticky Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-pink to-brand-lavender flex items-center justify-center text-brand-dark font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    MD
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-white group-hover:text-brand-pink transition-colors">Marga Delatina</span>
+                    <span class="block text-xs text-brand-pinkLight font-medium">E-Commerce Ops & CX Specialist</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#home" class="hover:text-brand-pink transition-colors text-slate-300">Home</a>
+                <a href="#about" class="hover:text-brand-pink transition-colors text-slate-300">About</a>
+                <a href="#ops-command" class="hover:text-brand-pink transition-colors text-slate-300">Ops Hub</a>
+                <a href="#chat-logs" class="hover:text-brand-pink transition-colors text-slate-300">Chat Simulations</a>
+                <a href="#risk-sop" class="hover:text-brand-pink transition-colors text-slate-300">Risk Playbook</a>
+                <a href="#sql-toolkit" class="hover:text-brand-pink transition-colors text-slate-300">SQL Toolkit</a>
+                <a href="#skills" class="hover:text-brand-pink transition-colors text-slate-300">Skills</a>
+                <a href="#pitch" class="hover:text-brand-pink transition-colors text-slate-300">Pitch & Contact</a>
+            </div>
+
+            <!-- Header Quick Action CTA -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a id="nav-whatsapp-link" href="https://wa.me/639662612676" target="_blank" title="Chat on WhatsApp" class="w-9 h-9 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+                <a id="nav-viber-link" href="viber://chat?number=%2B639662612676" title="Contact via Viber" class="w-9 h-9 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 border border-purple-500/30 flex items-center justify-center transition-all">
+                    <i class="fa-brands fa-viber text-lg"></i>
+                </a>
+                <a href="#contact" class="px-4 py-2 rounded-xl text-xs font-semibold bg-brand-pink text-brand-dark hover:bg-brand-pinkLight transition-all shadow-md hover:shadow-brand-pink/20">
+                    <i class="fa-regular fa-paper-plane mr-1"></i> Reach Out
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden text-slate-300 hover:text-brand-pink focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">About</a>
+            <a href="#ops-command" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">Ops Command Hub</a>
+            <a href="#chat-logs" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">Chat Simulations</a>
+            <a href="#risk-sop" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">De-Escalation & Risk Playbook</a>
+            <a href="#sql-toolkit" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">SQL Technical Toolkit</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">Skills & Tech Stack</a>
+            <a href="#pitch" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brand-pink transition-colors">Recruiter Pitch & Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow">
+
+        <!-- HERO SECTION -->
+        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden border-b border-brand-border/40">
+            <div class="absolute top-1/4 left-10 w-96 h-96 bg-brand-pink/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-lavender/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center space-y-6">
+                    
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-pink/10 border border-brand-pink/30 text-brand-pink text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-headset text-brand-pink"></i>
+                        E-Commerce CX, Risk & Operations Command Specialist
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        De-escalation. <br/>
+                        <span class="gradient-text">Empathy at Scale.</span> <br/>
+                        Analytical Precision.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+                        Operations Specialist with 4+ years of experience transforming high-friction e-commerce customer interactions into brand loyalty. Blending chemical engineering precision, HSBC banking compliance standards (99%+ accuracy), and Google AI tools to deliver seamless digital support.
+                    </p>
+
+                    <!-- Quick Direct Channel Badges -->
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
+                        <a id="hero-email-badge" href="mailto:mrg.delatina@gmail.com" class="px-3.5 py-2 rounded-xl bg-brand-card hover:bg-brand-border border border-brand-border text-xs font-semibold text-slate-200 hover:text-brand-pink transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-brand-pink"></i>
+                            <span id="hero-email-display">mrg.delatina@gmail.com</span>
+                        </a>
+                        <a id="hero-whatsapp-badge" href="https://wa.me/639662612676" target="_blank" class="px-3.5 py-2 rounded-xl bg-brand-card hover:bg-brand-border border border-brand-border text-xs font-semibold text-slate-200 hover:text-emerald-400 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span id="hero-whatsapp-display">WhatsApp (+63 966 261 2676)</span>
+                        </a>
+                        <a id="hero-viber-badge" href="viber://chat?number=%2B639662612676" class="px-3.5 py-2 rounded-xl bg-brand-card hover:bg-brand-border border border-brand-border text-xs font-semibold text-slate-200 hover:text-purple-400 transition-all flex items-center gap-2">
+                            <i class="fa-brands fa-viber text-purple-400"></i>
+                            <span id="hero-viber-display">Viber (+63 966 261 2676)</span>
+                        </a>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+                        <a href="#ops-command" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-pink to-brand-lavender text-brand-dark font-bold text-sm shadow-lg hover:shadow-brand-pink/30 transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-chart-line"></i> Explore Ops Command Hub
+                        </a>
+                        <a href="#chat-logs" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brand-card hover:bg-brand-border border border-brand-border text-white font-semibold text-sm transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-comments text-brand-pink"></i> View Simulated Chat Logs
+                        </a>
+                    </div>
+
+                    <!-- Quick Metrics Micro Badge Bar -->
+                    <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-brand-border/60">
+                        <div class="bg-brand-card/60 p-3 rounded-xl border border-brand-border/40">
+                            <div class="text-xl font-bold text-brand-pink">99%+</div>
+                            <div class="text-xs text-brand-textMuted font-medium">Data & SLA Accuracy</div>
+                        </div>
+                        <div class="bg-brand-card/60 p-3 rounded-xl border border-brand-border/40">
+                            <div class="text-xl font-bold text-brand-pinkLight">&lt; 28s</div>
+                            <div class="text-xs text-brand-textMuted font-medium">Avg First Response</div>
+                        </div>
+                        <div class="bg-brand-card/60 p-3 rounded-xl border border-brand-border/40">
+                            <div class="text-xl font-bold text-brand-lavender">99.5%</div>
+                            <div class="text-xs text-brand-textMuted font-medium">Average QA Performance</div>
+                        </div>
+                        <div class="bg-brand-card/60 p-3 rounded-xl border border-brand-border/40">
+                            <div class="text-xl font-bold text-emerald-400">100%</div>
+                            <div class="text-xs text-brand-textMuted font-medium">HIPAA/GDPR Audit</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME & CAREER TIMELINE -->
+        <section id="about" class="py-20 bg-brand-card/30 border-b border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Introduction Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-pink mb-2">Professional Background</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Analytical Precision Meets Human Empathy</p>
+                    <p class="text-slate-400 text-sm mt-3">
+                        This section outlines my career background, combining chemical engineering methodology with high-stakes banking compliance and omnichannel e-commerce CX execution.
+                    </p>
+                    <div class="w-16 h-1 bg-gradient-to-r from-brand-pink to-brand-lavender mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="bg-brand-card p-8 rounded-3xl border border-brand-border relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-pink/5 rounded-full blur-2xl"></div>
+                            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-address-card text-brand-pink"></i> Career Profile
+                            </h3>
+                            <p class="text-slate-300 leading-relaxed text-sm mb-4">
+                                With over 4 years in digital-first operations and customer success across banking giants like <strong class="text-brand-pinkLight">HSBC</strong>, top BPOs like <strong class="text-brand-pinkLight">Concentrix</strong> and <strong class="text-brand-pinkLight">Teleperformance</strong>, I specialize in resolving high-friction customer disputes with calm authority, empathy, and speed.
+                            </p>
+                            <p class="text-slate-300 leading-relaxed text-sm">
+                                My foundation in <strong class="text-brand-pinkLight">Chemical Engineering coursework (Adamson University)</strong> brings an analytical, root-cause troubleshooting methodology to support operations. Combined with rigorous <strong class="text-brand-pinkLight">HIPAA/GDPR risk compliance</strong> and recent <strong class="text-brand-pinkLight">Google AI & Athena Executive Assistant training</strong>, I build efficient support workflows that protect brand reputation and elevate CSAT scores.
+                            </p>
+                            
+                            <div class="mt-6 pt-6 border-t border-brand-border/60 grid grid-cols-2 gap-4">
+                                <div>
+                                    <span class="block text-xs text-brand-textMuted uppercase font-semibold">Location</span>
+                                    <span class="text-sm font-semibold text-slate-200">Quezon City, PH (Remote Ready)</span>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-brand-textMuted uppercase font-semibold">Specialization</span>
+                                    <span class="text-sm font-semibold text-brand-pink">E-Commerce CX & Risk Mitigation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-card p-6 rounded-3xl border border-brand-border">
+                            <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-bullseye text-brand-lavender"></i> Career Mission & Vision
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                To help fast-scaling e-commerce brands maintain a 98%+ CSAT by combining automated AI triage tools with deep human empathy, reducing refund chargebacks, and turning angry shoppers into loyal repeat buyers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Career Timeline -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-brand-pink"></i> Experience Timeline
+                        </h3>
+
+                        <div class="space-y-4 relative border-l-2 border-brand-border pl-6 ml-3">
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-pink border-4 border-brand-dark group-hover:scale-125 transition-transform"></div>
+                                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-bold text-white text-sm">Operations Specialist</h4>
+                                        <span class="text-xs px-2 py-0.5 rounded bg-brand-pink/10 text-brand-pink border border-brand-pink/20 font-mono">Feb 2025 – May 2026</span>
+                                    </div>
+                                    <div class="text-xs text-brand-pinkLight font-medium mb-2">HSBC</div>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Executed account verification & backend data entry with 99%+ accuracy. Resolved login & financial transaction disputes while adhering to strict banking compliance & SLAs.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-lavender border-4 border-brand-dark group-hover:scale-125 transition-transform"></div>
+                                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-bold text-white text-sm">Sales Advisor I</h4>
+                                        <span class="text-xs px-2 py-0.5 rounded bg-brand-border text-slate-300 font-mono">Jan 2024 – Dec 2024</span>
+                                    </div>
+                                    <div class="text-xs text-brand-pinkLight font-medium mb-2">Concentrix</div>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Managed high-volume shipment tracking, booking dispute resolution, and CRM records in fast-paced multi-channel support environments.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-border border-4 border-brand-dark group-hover:scale-125 transition-transform"></div>
+                                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-bold text-white text-sm">Customer Service Representative</h4>
+                                        <span class="text-xs px-2 py-0.5 rounded bg-brand-border text-slate-300 font-mono">Sept 2022 – Jan 2024</span>
+                                    </div>
+                                    <div class="text-xs text-brand-pinkLight font-medium mb-2">Teleperformance</div>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Processed confidential health insurance data under strict HIPAA & GDPR standards while maintaining high customer satisfaction ratings.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="relative group">
+                                <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-brand-border border-4 border-brand-dark group-hover:scale-125 transition-transform"></div>
+                                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-bold text-white text-sm">Freelance Data & Support Specialist</h4>
+                                        <span class="text-xs px-2 py-0.5 rounded bg-brand-border text-slate-300 font-mono">Jan 2022 – Aug 2022</span>
+                                    </div>
+                                    <div class="text-xs text-brand-pinkLight font-medium mb-2">Remote Digital Support</div>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Digital content moderation and WhatsApp/email customer inquiry resolution following community safety protocols.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- OPERATIONS COMMAND HUB & LIVE SLA TRACKER -->
+        <section id="ops-command" class="py-20 border-b border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                
+                <!-- Section Introduction Header -->
+                <div class="bg-brand-card rounded-3xl border border-brand-border p-6 md:p-8 relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-brand-pink/10 text-brand-pink border border-brand-pink/20 rounded-full mb-3">
+                                Track 3: E-Commerce Operations & Executive Command
+                            </span>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white">Multi-Channel Operations Command Hub & Live SLA Dashboard</h2>
+                            <p class="text-sm text-slate-300 mt-2 max-w-3xl leading-relaxed">
+                                This interactive dashboard simulates a live operational command center. It monitors incoming support cases across Live Chat, CRM Tickets, Email, and Internal Escalations, tracking SLA resolution turnaround times, breach bottlenecks, root-cause classifications, and QA accuracy in real time.
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="resetTableFilters()" class="px-4 py-2 text-xs font-semibold bg-brand-border hover:bg-brand-cardHover text-slate-200 rounded-xl border border-brand-border transition flex items-center gap-2">
+                                <i class="fa-solid fa-rotate-right"></i> Reset Filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic KPI Summary Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border">
+                        <p class="text-xs font-semibold uppercase text-brand-textMuted">Filtered Case Volume</p>
+                        <p id="kpi-total-cases" class="text-2xl font-bold text-white mt-1">15</p>
+                        <p class="text-xs text-slate-400 mt-1">Active Operations Log Records</p>
+                    </div>
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border">
+                        <p class="text-xs font-semibold uppercase text-brand-textMuted">SLA Compliance Rate</p>
+                        <p id="kpi-sla-rate" class="text-2xl font-bold text-emerald-400 mt-1">93.3%</p>
+                        <p class="text-xs text-slate-400 mt-1">Benchmark SLA Target: 95.0%+</p>
+                    </div>
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border">
+                        <p class="text-xs font-semibold uppercase text-brand-textMuted">Average QA Score</p>
+                        <p id="kpi-avg-qa" class="text-2xl font-bold text-brand-pink mt-1">99.5%</p>
+                        <p class="text-xs text-slate-400 mt-1">Flawless Quality Target</p>
+                    </div>
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border">
+                        <p class="text-xs font-semibold uppercase text-brand-textMuted">Avg Resolution Time</p>
+                        <p id="kpi-avg-res" class="text-2xl font-bold text-brand-lavender mt-1">3.67 Hrs</p>
+                        <p class="text-xs text-slate-400 mt-1">Across All Support Channels</p>
+                    </div>
+                </div>
+
+                <!-- Visual Charts Row -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Chart 1: SLA Target vs Actual Resolution Time -->
+                    <div class="bg-brand-card p-6 rounded-3xl border border-brand-border flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="font-bold text-white text-base">Average Resolution Time vs. SLA Target by Category</h3>
+                            <p class="text-xs text-brand-textMuted mt-0.5">Evaluates operational resolution speed against benchmarks (Hours).</p>
+                        </div>
+                        <div class="flex-grow flex items-center justify-center">
+                            <div class="chart-container">
+                                <canvas id="categoryChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: Channel Volume & SLA Compliance -->
+                    <div class="bg-brand-card p-6 rounded-3xl border border-brand-border flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="font-bold text-white text-base">Support Channel Volume & SLA Compliance Outcome</h3>
+                            <p class="text-xs text-brand-textMuted mt-0.5">Distribution of cases (Met vs. Breached) across inbound support channels.</p>
+                        </div>
+                        <div class="flex-grow flex items-center justify-center">
+                            <div class="chart-container">
+                                <canvas id="channelChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Table Controls & Filtering Bar -->
+                <div class="bg-brand-card rounded-3xl border border-brand-border overflow-hidden">
+                    <div class="p-4 bg-brand-card/80 border-b border-brand-border flex flex-col md:flex-row gap-3 items-center justify-between">
+                        <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                            <!-- Channel Filter -->
+                            <select id="filter-channel" onchange="applyFilters()" class="text-xs border border-brand-border rounded-xl px-3 py-2 bg-brand-dark text-slate-200 focus:outline-none focus:border-brand-pink">
+                                <option value="ALL">All Support Channels</option>
+                                <option value="Live Chat">Live Chat</option>
+                                <option value="CRM Ticket">CRM Ticket</option>
+                                <option value="Email">Email</option>
+                                <option value="Internal Escalation">Internal Escalation</option>
+                            </select>
+
+                            <!-- Category Filter -->
+                            <select id="filter-category" onchange="applyFilters()" class="text-xs border border-brand-border rounded-xl px-3 py-2 bg-brand-dark text-slate-200 focus:outline-none focus:border-brand-pink">
+                                <option value="ALL">All Categories</option>
+                                <option value="Account Access">Account Access</option>
+                                <option value="Dispute Resolution">Dispute Resolution</option>
+                                <option value="Compliance Review">Compliance Review</option>
+                                <option value="Data Update">Data Update</option>
+                            </select>
+
+                            <!-- SLA Status Filter -->
+                            <select id="filter-status" onchange="applyFilters()" class="text-xs border border-brand-border rounded-xl px-3 py-2 bg-brand-dark text-slate-200 focus:outline-none focus:border-brand-pink">
+                                <option value="ALL">All SLA Statuses</option>
+                                <option value="Met">SLA Met</option>
+                                <option value="Breached">SLA Breached</option>
+                            </select>
+                        </div>
+
+                        <!-- Search Box -->
+                        <div class="w-full md:w-64">
+                            <input type="text" id="filter-search" onkeyup="applyFilters()" placeholder="Search Case ID or Notes..." class="w-full text-xs border border-brand-border rounded-xl px-3 py-2 bg-brand-dark text-slate-200 focus:outline-none focus:border-brand-pink">
+                        </div>
+                    </div>
+
+                    <!-- Interactive Data Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="bg-brand-dark/50 text-slate-300 uppercase font-semibold text-[11px] border-b border-brand-border">
+                                    <th class="p-3.5">Case ID</th>
+                                    <th class="p-3.5">Channel</th>
+                                    <th class="p-3.5">Category</th>
+                                    <th class="p-3.5">Inbound Time</th>
+                                    <th class="p-3.5">Res. Time</th>
+                                    <th class="p-3.5">SLA Target</th>
+                                    <th class="p-3.5">SLA Status</th>
+                                    <th class="p-3.5">QA Score</th>
+                                    <th class="p-3.5">Root Cause & Investigation Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-table-body" class="divide-y divide-brand-border/60">
+                                <!-- JS populated rows -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Footer Summary -->
+                    <div class="p-3.5 bg-brand-dark/40 border-t border-brand-border text-xs text-brand-textMuted flex justify-between items-center">
+                        <span id="table-record-count">Showing 15 of 15 case records</span>
+                        <span class="italic text-[11px]">Click on any row to open full audit details</span>
+                    </div>
+                </div>
+
+                <!-- Export Dataset Snippet CTA -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div class="text-xs text-slate-300">
+                        <span class="font-bold text-white block text-sm mb-0.5">Need raw CSV dataset for spreadsheet audit or dashboard import?</span>
+                        You can copy the dataset directly into Microsoft Excel or Google Sheets.
+                    </div>
+                    <button onclick="copyDatasetCSV()" class="whitespace-nowrap px-4 py-2.5 text-xs font-semibold bg-brand-pink text-brand-dark hover:bg-brand-pinkLight rounded-xl shadow-md transition flex items-center gap-2">
+                        <i class="fa-regular fa-copy"></i> Copy CSV Dataset
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SIMULATED LIVE CHAT CONVERSATIONS -->
+        <section id="chat-logs" class="py-20 bg-brand-card/30 border-b border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                
+                <!-- Section Introduction Header -->
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-pink mb-2">Omnichannel CX In Action</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Interactive Live Chat Simulations</p>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                        Explore real-world customer support scenarios demonstrating empathy anchors, proactive WISMO tracking, subscription retention, and de-escalation framework execution.
+                    </p>
+                </div>
+
+                <!-- Scenario Selector Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+                    <button onclick="switchChatScenario('wismo')" id="chat-tab-wismo" class="chat-scenario-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-brand-pink text-brand-dark shadow-md transition flex items-center gap-2">
+                        <i class="fa-solid fa-truck-fast"></i> 1. Lost Package / WISMO Triage
+                    </button>
+                    <button onclick="switchChatScenario('refund')" id="chat-tab-refund" class="chat-scenario-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-brand-card text-slate-300 border border-brand-border hover:border-brand-pink transition flex items-center gap-2">
+                        <i class="fa-solid fa-box-open"></i> 2. Damaged Product / Replacement
+                    </button>
+                    <button onclick="switchChatScenario('sub')" id="chat-tab-sub" class="chat-scenario-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-brand-card text-slate-300 border border-brand-border hover:border-brand-pink transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-left"></i> 3. Subscription Retention
+                    </button>
+                    <button onclick="switchChatScenario('escrow')" id="chat-tab-escrow" class="chat-scenario-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-brand-card text-slate-300 border border-brand-border hover:border-brand-pink transition flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved"></i> 4. Escrow Dispute & KYC
+                    </button>
+                </div>
+
+                <!-- Chat Display Box -->
+                <div class="max-w-3xl mx-auto bg-brand-card rounded-3xl border border-brand-border shadow-2xl overflow-hidden">
+                    
+                    <!-- Chat Header Bar -->
+                    <div class="p-4 bg-brand-dark/90 border-b border-brand-border flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="relative">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-pink to-brand-lavender flex items-center justify-center font-bold text-brand-dark text-sm">
+                                    MD
+                                </div>
+                                <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-brand-dark rounded-full"></span>
+                            </div>
+                            <div>
+                                <h3 id="chat-scenario-title" class="font-bold text-white text-sm">Scenario 1: WISMO / Delayed Courier Shipment</h3>
+                                <p id="chat-scenario-subtitle" class="text-xs text-brand-pinkLight">Customer Sentiment: Frustrated &#8594; De-escalated & Satisfied</p>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 bg-brand-pink/10 text-brand-pink border border-brand-pink/20 text-[11px] font-mono rounded-full">
+                            First Response: 18s
+                        </span>
+                    </div>
+
+                    <!-- Chat Messages Stream Container -->
+                    <div id="chat-message-container" class="p-6 space-y-4 max-h-[480px] overflow-y-auto custom-scrollbar">
+                        <!-- JS Dynamic Chat Injection -->
+                    </div>
+
+                    <!-- Chat Footer Action Bar -->
+                    <div class="p-3.5 bg-brand-dark/60 border-t border-brand-border text-xs text-brand-textMuted flex items-center justify-between">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-brand-pink"></i> Full GDPR/HIPAA PII Masking Applied</span>
+                        <span class="font-mono text-[11px]">CSAT Score: 5.0 / 5.0</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DE-ESCALATION & TRUST/SAFETY RISK SOP PLAYBOOK -->
+        <section id="risk-sop" class="py-20 border-b border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <!-- Section Introduction Header -->
+                <div class="bg-brand-card rounded-3xl border border-brand-border p-6 md:p-8">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold bg-brand-lavender/10 text-brand-lavender border border-brand-lavender/20 rounded-full mb-3">
+                        Track 2: Trust, Safety & Compliance Framework
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">FinTech, P2P & E-Commerce De-Escalation & Risk Playbook</h2>
+                    <p class="text-sm text-slate-300 mt-2 max-w-3xl leading-relaxed">
+                        This section provides standardized standard operating procedures (SOPs) for evaluating transactional risk, executing KYC/AML identity checks, resolving P2P escrow dispute claims, and maintaining 100% data privacy compliance (HIPAA & GDPR Article 17).
+                    </p>
+                </div>
+
+                <!-- Interactive 3-Tier Risk Matrix -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-brand-pink"></i> 3-Tier Risk Assessment & Escalation Protocol
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Tier 1 Card -->
+                        <div class="bg-brand-card border-t-4 border-emerald-400 rounded-2xl p-6 border-x border-b border-brand-border flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 font-bold text-xs rounded-full border border-emerald-500/20">Tier 1: Low Risk</span>
+                                    <span class="text-xs font-semibold text-slate-400">SLA: &lt; 4 Hours</span>
+                                </div>
+                                <h4 class="font-bold text-white text-sm mb-2">Triggers & Indicators</h4>
+                                <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
+                                    <li>Minor document blur in routine KYC upload</li>
+                                    <li>First-time user mailing address update</li>
+                                    <li>Standard login device/browser update</li>
+                                </ul>
+                                <h4 class="font-bold text-brand-textMuted text-xs uppercase tracking-wider mb-2">Verification Actions</h4>
+                                <ol class="text-xs text-slate-300 space-y-1 list-decimal list-inside">
+                                    <li>Automated database cross-check</li>
+                                    <li>Request clear secondary ID re-upload</li>
+                                    <li>Verify user email/phone OTP token</li>
+                                </ol>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-textMuted">
+                                <strong>Escalation Target:</strong> L1 Support Specialist
+                            </div>
+                        </div>
+
+                        <!-- Tier 2 Card -->
+                        <div class="bg-brand-card border-t-4 border-amber-400 rounded-2xl p-6 border-x border-b border-brand-border flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 font-bold text-xs rounded-full border border-amber-500/20">Tier 2: Medium Risk</span>
+                                    <span class="text-xs font-semibold text-slate-400">SLA: &lt; 2 Hours</span>
+                                </div>
+                                <h4 class="font-bold text-white text-sm mb-2">Triggers & Indicators</h4>
+                                <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
+                                    <li>Multiple failed 2FA / password attempts</li>
+                                    <li>P2P escrow payment release dispute</li>
+                                    <li>Rapid acceleration in transaction velocity</li>
+                                </ul>
+                                <h4 class="font-bold text-brand-textMuted text-xs uppercase tracking-wider mb-2">Verification Actions</h4>
+                                <ol class="text-xs text-slate-300 space-y-1 list-decimal list-inside">
+                                    <li>Temporary hold on account withdrawals</li>
+                                    <li>Manual audit of government ID & utility bill</li>
+                                    <li>Verify bank payment confirmation logs</li>
+                                </ol>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-textMuted">
+                                <strong>Escalation Target:</strong> Risk & Compliance Specialist
+                            </div>
+                        </div>
+
+                        <!-- Tier 3 Card -->
+                        <div class="bg-brand-card border-t-4 border-rose-500 rounded-2xl p-6 border-x border-b border-brand-border flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="px-2.5 py-1 bg-rose-500/10 text-rose-400 font-bold text-xs rounded-full border border-rose-500/20">Tier 3: Critical Risk</span>
+                                    <span class="text-xs font-semibold text-slate-400">SLA: &lt; 30 Mins</span>
+                                </div>
+                                <h4 class="font-bold text-white text-sm mb-2">Triggers & Indicators</h4>
+                                <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-4">
+                                    <li>Flagged PEP / Sanctions database match</li>
+                                    <li>Unsolicited PII / bank detail alteration</li>
+                                    <li>Suspicion of Account Takeover (ATO)</li>
+                                </ul>
+                                <h4 class="font-bold text-brand-textMuted text-xs uppercase tracking-wider mb-2">Verification Actions</h4>
+                                <ol class="text-xs text-slate-300 space-y-1 list-decimal list-inside">
+                                    <li>Immediate account lock & token revocation</li>
+                                    <li>Full transaction log & IP audit extraction</li>
+                                    <li>Draft Suspicious Activity Report (SAR)</li>
+                                </ol>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-brand-border text-xs text-brand-textMuted">
+                                <strong>Escalation Target:</strong> Compliance Lead / Legal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operational Workflow Sequences -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    
+                    <!-- Workflow A -->
+                    <div class="bg-brand-card rounded-3xl border border-brand-border p-6">
+                        <h3 class="font-bold text-white text-base mb-1">Workflow A: P2P Escrow & Dispute Mediation Flow</h3>
+                        <p class="text-xs text-brand-textMuted mb-4">Standard operating sequence for buyer/seller trade disputes.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="p-3.5 bg-brand-dark/60 rounded-xl border border-brand-border flex items-center space-x-3">
+                                <span class="w-6 h-6 rounded-full bg-brand-pink text-brand-dark font-bold text-xs flex items-center justify-center shrink-0">1</span>
+                                <div>
+                                    <span class="font-bold text-xs text-white">Inbound Dispute Triggered</span>
+                                    <p class="text-[11px] text-slate-400">Buyer or seller logs non-receipt of payment/crypto release.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 bg-brand-pink/10 rounded-xl border border-brand-pink/30 flex items-center space-x-3">
+                                <span class="w-6 h-6 rounded-full bg-brand-pink text-brand-dark font-bold text-xs flex items-center justify-center shrink-0">2</span>
+                                <div>
+                                    <span class="font-bold text-xs text-brand-pinkLight">Place Escrow Hold</span>
+                                    <p class="text-[11px] text-brand-pinkLight/80">Lock underlying digital assets in smart escrow to prevent capital loss.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 bg-brand-dark/60 rounded-xl border border-brand-border flex items-center space-x-3">
+                                <span class="w-6 h-6 rounded-full bg-brand-pink text-brand-dark font-bold text-xs flex items-center justify-center shrink-0">3</span>
+                                <div>
+                                    <span class="font-bold text-xs text-white">Evidence Ingestion & Audit</span>
+                                    <p class="text-[11px] text-slate-400">Request bank transfer PDF receipt, chat history, and timestamp logs.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 bg-emerald-500/10 rounded-xl border border-emerald-500/30 flex items-center space-x-3">
+                                <span class="w-6 h-6 rounded-full bg-emerald-400 text-brand-dark font-bold text-xs flex items-center justify-center shrink-0">4</span>
+                                <div>
+                                    <span class="font-bold text-xs text-emerald-300">Resolution & Asset Release</span>
+                                    <p class="text-[11px] text-emerald-200/80">Valid Payment: Release escrow to buyer. Fraud Detected: Freeze fraudulent account.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Workflow B -->
+                    <div class="bg-brand-card rounded-3xl border border-brand-border p-6">
+                        <h3 class="font-bold text-white text-base mb-1">Workflow B: Regulatory Data Privacy & Masking Standard</h3>
+                        <p class="text-xs text-brand-textMuted mb-4">HIPAA & GDPR Article 17 operational controls.</p>
+
+                        <div class="space-y-3.5">
+                            <div class="p-3.5 bg-brand-dark/60 rounded-xl border border-brand-border">
+                                <span class="font-bold text-xs text-white block mb-1">1. PII Masking Protocol</span>
+                                <p class="text-xs text-slate-300">
+                                    All Social Security Numbers, Tax IDs, and credit card credentials are sanitized prior to internal ticket creation:
+                                </p>
+                                <div class="mt-2 p-2 bg-brand-dark text-brand-pink font-mono text-[11px] rounded-lg border border-brand-border">
+                                    Raw Input: 123-45-6789 &#8594; Masked Output: XXX-XX-6789
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 bg-brand-dark/60 rounded-xl border border-brand-border">
+                                <span class="font-bold text-xs text-white block mb-1">2. Role-Based Access Control (RBAC)</span>
+                                <p class="text-xs text-slate-300">
+                                    Document attachments containing raw healthcare or banking data are restricted strictly to Tier 2/3 verified specialists using time-bound security tokens.
+                                </p>
+                            </div>
+
+                            <div class="p-3.5 bg-brand-dark/60 rounded-xl border border-brand-border">
+                                <span class="font-bold text-xs text-white block mb-1">3. GDPR Right-to-be-Forgotten Execution</span>
+                                <p class="text-xs text-slate-300">
+                                    User erasure requests are completed within 72 hours. Backup database logs are anonymized while retaining transaction counters for compliance audit trails.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SQL DATA ANALYTICS & DATABASE TOOLKIT -->
+        <section id="sql-toolkit" class="py-20 bg-brand-card/30 border-b border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                
+                <!-- Section Introduction Header -->
+                <div class="bg-brand-card rounded-3xl border border-brand-border p-6 md:p-8">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full mb-3">
+                        Track 1: Data Analytics & Database Management
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">SQL Data Querying & Relational Database Toolkit</h2>
+                    <p class="text-sm text-slate-300 mt-2 max-w-3xl leading-relaxed">
+                        Demonstrates functional SQL data extraction, aggregation, window functions, and SLA compliance queries used to audit backend transaction tables and operational CRM logs.
+                    </p>
+                </div>
+
+                <!-- SQL Code Snippets Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    
+                    <!-- Snippet 1 -->
+                    <div class="bg-brand-card rounded-2xl p-6 border border-brand-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-brand-pink uppercase tracking-wider">Query 1: SLA Compliance & Turnaround Calculation</span>
+                                <button onclick="copyCode('sql-code-1')" class="text-xs bg-brand-dark hover:bg-brand-border text-slate-300 px-3 py-1.5 rounded-lg border border-brand-border transition flex items-center gap-1.5">
+                                    <i class="fa-regular fa-copy"></i> Copy SQL
+                                </button>
+                            </div>
+                            <pre id="sql-code-1" class="text-xs font-mono bg-brand-dark p-4 rounded-xl text-brand-pinkLight overflow-x-auto custom-scrollbar border border-brand-border"><code>SELECT 
+    category,
+    COUNT(case_id) AS total_cases,
+    ROUND(AVG(resolution_time_hrs), 2) AS avg_res_time,
+    SUM(CASE WHEN sla_status = 'Met' THEN 1 ELSE 0 END) AS cases_met,
+    ROUND(
+        (SUM(CASE WHEN sla_status = 'Met' THEN 1 ELSE 0 END) * 100.0) / COUNT(case_id), 
+        1
+    ) AS sla_compliance_pct
+FROM operations_log
+GROUP BY category
+ORDER BY sla_compliance_pct DESC;</code></pre>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-border text-xs text-slate-400">
+                            <strong>Purpose:</strong> Evaluates overall compliance rate and average resolution hours grouped by operational category.
+                        </div>
+                    </div>
+
+                    <!-- Snippet 2 -->
+                    <div class="bg-brand-card rounded-2xl p-6 border border-brand-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-brand-pink uppercase tracking-wider">Query 2: Identifying High-Risk SLA Breaches</span>
+                                <button onclick="copyCode('sql-code-2')" class="text-xs bg-brand-dark hover:bg-brand-border text-slate-300 px-3 py-1.5 rounded-lg border border-brand-border transition flex items-center gap-1.5">
+                                    <i class="fa-regular fa-copy"></i> Copy SQL
+                                </button>
+                            </div>
+                            <pre id="sql-code-2" class="text-xs font-mono bg-brand-dark p-4 rounded-xl text-brand-pinkLight overflow-x-auto custom-scrollbar border border-brand-border"><code>SELECT 
+    case_id,
+    channel,
+    category,
+    resolution_time_hrs,
+    sla_target_hrs,
+    (resolution_time_hrs - sla_target_hrs) AS breach_margin_hrs,
+    root_cause_notes
+FROM operations_log
+WHERE sla_status = 'Breached'
+ORDER BY breach_margin_hrs DESC;</code></pre>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-border text-xs text-slate-400">
+                            <strong>Purpose:</strong> Filters breached tickets and measures exact delay duration for executive root-cause investigation.
+                        </div>
+                    </div>
+
+                    <!-- Snippet 3 -->
+                    <div class="bg-brand-card rounded-2xl p-6 border border-brand-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-brand-pink uppercase tracking-wider">Query 3: Channel Performance Window Ranking</span>
+                                <button onclick="copyCode('sql-code-3')" class="text-xs bg-brand-dark hover:bg-brand-border text-slate-300 px-3 py-1.5 rounded-lg border border-brand-border transition flex items-center gap-1.5">
+                                    <i class="fa-regular fa-copy"></i> Copy SQL
+                                </button>
+                            </div>
+                            <pre id="sql-code-3" class="text-xs font-mono bg-brand-dark p-4 rounded-xl text-brand-pinkLight overflow-x-auto custom-scrollbar border border-brand-border"><code>SELECT 
+    channel,
+    case_id,
+    qa_score_pct,
+    DENSE_RANK() OVER (
+        PARTITION BY channel 
+        ORDER BY resolution_time_hrs ASC
+    ) AS speed_rank
+FROM operations_log
+WHERE qa_score_pct >= 98;</code></pre>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-border text-xs text-slate-400">
+                            <strong>Purpose:</strong> Uses SQL Window functions to rank top-performing tickets per support channel maintaining high QA quality.
+                        </div>
+                    </div>
+
+                    <!-- Snippet 4 -->
+                    <div class="bg-brand-card rounded-2xl p-6 border border-brand-border flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-brand-pink uppercase tracking-wider">Query 4: AML & KYC Flag Audit Verification</span>
+                                <button onclick="copyCode('sql-code-4')" class="text-xs bg-brand-dark hover:bg-brand-border text-slate-300 px-3 py-1.5 rounded-lg border border-brand-border transition flex items-center gap-1.5">
+                                    <i class="fa-regular fa-copy"></i> Copy SQL
+                                </button>
+                            </div>
+                            <pre id="sql-code-4" class="text-xs font-mono bg-brand-dark p-4 rounded-xl text-brand-pinkLight overflow-x-auto custom-scrollbar border border-brand-border"><code>SELECT 
+    u.user_id,
+    t.transaction_id,
+    t.amount,
+    c.risk_tier,
+    c.verification_status
+FROM users u
+JOIN transactions t ON u.user_id = t.user_id
+JOIN compliance_checks c ON t.transaction_id = c.transaction_id
+WHERE c.risk_tier IN ('Tier 2', 'Tier 3')
+  AND c.verification_status = 'Pending Review';</code></pre>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-brand-border text-xs text-slate-400">
+                            <strong>Purpose:</strong> Multi-table relational JOIN script cross-referencing flagged user accounts with high-risk compliance queues.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SKILLS & CERTIFICATIONS SHOWCASE -->
+        <section id="skills" class="py-20 border-b border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-pink mb-2">Technical Competencies</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Skills, Tools & Certifications</p>
+                    <p class="text-slate-400 text-sm mt-3">Comprehensive breakdown of CRM platforms, data tools, compliance, and AI capabilities.</p>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-brand-card p-6 rounded-3xl border border-brand-border">
+                        <div class="w-10 h-10 rounded-xl bg-brand-pink/10 text-brand-pink flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-3">CRM & Support Systems</h3>
+                        <ul class="text-xs text-slate-300 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink text-[10px]"></i> Zendesk Suite & Ticketing</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink text-[10px]"></i> Salesforce Service Cloud</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink text-[10px]"></i> Live Chat & WhatsApp Business</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink text-[10px]"></i> Gorgias E-Commerce Desk</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brand-card p-6 rounded-3xl border border-brand-border">
+                        <div class="w-10 h-10 rounded-xl bg-brand-lavender/10 text-brand-lavender flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-3">Data Analytics & SQL</h3>
+                        <ul class="text-xs text-slate-300 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lavender text-[10px]"></i> SQL Data Querying & JOINs</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lavender text-[10px]"></i> Google Sheets & Excel Pivot Tables</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lavender text-[10px]"></i> SLA & Turnaround Metrics</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lavender text-[10px]"></i> Root Cause Analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brand-card p-6 rounded-3xl border border-brand-border">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-3">Risk & Compliance</h3>
+                        <ul class="text-xs text-slate-300 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> KYC & AML Verification</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> HIPAA Data Masking</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> GDPR Right-to-be-Forgotten</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Chargeback & Fraud Reduction</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brand-card p-6 rounded-3xl border border-brand-border">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg font-bold mb-4">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-3">AI & Executive Tools</h3>
+                        <ul class="text-xs text-slate-300 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Google AI Prompt Engineering</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Athena Executive Assistant SOPs</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Calendar & Inbox Management</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Asana & ClickUp Workflow Management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications Card Grid -->
+                <div class="bg-brand-card rounded-3xl border border-brand-border p-6 md:p-8">
+                    <h3 class="font-bold text-white text-lg mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-brand-pink"></i> Certifications & Upskilling Track
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-4 bg-brand-dark/70 rounded-2xl border border-brand-border">
+                            <span class="font-bold text-white text-xs block">SQL Associate Certification</span>
+                            <span class="text-brand-pinkLight text-[11px]">DataCamp (In Progress)</span>
+                        </div>
+                        <div class="p-4 bg-brand-dark/70 rounded-2xl border border-brand-border">
+                            <span class="font-bold text-white text-xs block">Introduction to Data Science</span>
+                            <span class="text-brand-pinkLight text-[11px]">Cisco (August 2026)</span>
+                        </div>
+                        <div class="p-4 bg-brand-dark/70 rounded-2xl border border-brand-border">
+                            <span class="font-bold text-white text-xs block">Executive Assistant Training</span>
+                            <span class="text-brand-pinkLight text-[11px]">Athena EA (June 2026)</span>
+                        </div>
+                        <div class="p-4 bg-brand-dark/70 rounded-2xl border border-brand-border">
+                            <span class="font-bold text-white text-xs block">Google AI Professional</span>
+                            <span class="text-brand-pinkLight text-[11px]">Google (June 2026)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RECRUITER PITCH & DIRECT CONTACT -->
+        <section id="pitch" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <!-- Section Introduction Header -->
+                <div class="bg-brand-card rounded-3xl border border-brand-border p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full mb-3">
+                                Hiring Alignment & Interview Positioning
+                            </span>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white">Tailored Recruiter Pitch Scripts</h2>
+                            <p class="text-sm text-slate-300 mt-2 max-w-2xl leading-relaxed">
+                                Select a target recruitment role to preview the corresponding interview response positioning.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="togglePitch('cx')" id="btn-pitch-cx" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-pink text-brand-dark shadow-md transition">
+                                E-Commerce CX & Ops
+                            </button>
+                            <button onclick="togglePitch('ts')" id="btn-pitch-ts" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-dark text-slate-300 border border-brand-border hover:border-brand-pink transition">
+                                Trust & Safety / Risk
+                            </button>
+                            <button onclick="togglePitch('ea')" id="btn-pitch-ea" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-dark text-slate-300 border border-brand-border hover:border-brand-pink transition">
+                                Executive Support
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Script Quote Container -->
+                    <div id="pitch-cx" class="mt-6 p-5 bg-brand-dark/80 border border-brand-border rounded-2xl text-xs sm:text-sm text-slate-200 leading-relaxed">
+                        <p class="font-bold text-brand-pink mb-1">Response Script for E-Commerce CX & Operations Hiring Managers:</p>
+                        <blockquote class="italic border-l-4 border-brand-pink pl-4 py-1.5 my-2 bg-brand-card/60 rounded-r-xl">
+                            "I specialize in turning high-friction customer complaints into 5-star brand loyalty. In my previous roles across HSBC and e-commerce support, I maintained a 99%+ data accuracy rate and a sub-30 second first response time on live chat. By combining proactive WISMO tracking, empathy anchors, and clear de-escalation frameworks, I keep CSAT high while minimizing unnecessary refund chargebacks."
+                        </blockquote>
+                    </div>
+
+                    <div id="pitch-ts" class="mt-6 p-5 bg-brand-dark/80 border border-brand-border rounded-2xl text-xs sm:text-sm text-slate-200 leading-relaxed hidden">
+                        <p class="font-bold text-brand-lavender mb-1">Response Script for Trust & Safety / Risk Hiring Managers:</p>
+                        <blockquote class="italic border-l-4 border-brand-lavender pl-4 py-1.5 my-2 bg-brand-card/60 rounded-r-xl">
+                            "In my risk mitigation work, I specialize in enforcing playbooks covering KYC/AML identity verification and strict data privacy regulations like HIPAA and GDPR. In my portfolio SOP framework, I designed a 3-tier risk escalation matrix that triages inbound flags by severity, ensuring critical account takeovers or sanctions matches are escalated within 30 minutes while maintaining 100% data privacy compliance."
+                        </blockquote>
+                    </div>
+
+                    <div id="pitch-ea" class="mt-6 p-5 bg-brand-dark/80 border border-brand-border rounded-2xl text-xs sm:text-sm text-slate-200 leading-relaxed hidden">
+                        <p class="font-bold text-emerald-400 mb-1">Response Script for Executive Assistant & Operations Hiring Managers:</p>
+                        <blockquote class="italic border-l-4 border-emerald-400 pl-4 py-1.5 my-2 bg-brand-card/60 rounded-r-xl">
+                            "Having completed Athena Executive Assistant training alongside chemical engineering coursework, I bring executive-level organizational rigor to daily operations. I manage executive calendars, draft prompt engineering workflows with Google AI, and track SLA dashboards to remove bottlenecks before they impact leadership priorities."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- DIRECT CONTACT CHANNELS -->
+                <div id="contact" class="max-w-3xl mx-auto">
+                    
+                    <!-- Direct Info Box -->
+                    <div class="bg-brand-card p-8 md:p-10 rounded-3xl border border-brand-border space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2 text-center">Let's Connect</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed text-center max-w-xl mx-auto">
+                                Available for full-time remote roles in E-Commerce Operations, Trust & Safety, CX Management, and Executive Support. Reach out via your preferred direct channel:
+                            </p>
+
+                            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-200">
+                                <div class="flex items-center space-x-3 p-3.5 bg-brand-dark/60 rounded-2xl border border-brand-border">
+                                    <div class="w-9 h-9 rounded-xl bg-brand-pink/10 text-brand-pink flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-brand-textMuted text-[10px]">Direct Email</span>
+                                        <a href="mailto:mrg.delatina@gmail.com" class="font-semibold text-white hover:text-brand-pink transition">mrg.delatina@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-3 p-3.5 bg-brand-dark/60 rounded-2xl border border-brand-border">
+                                    <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-brand-textMuted text-[10px]">WhatsApp</span>
+                                        <a href="https://wa.me/639662612676" target="_blank" class="font-semibold text-white hover:text-emerald-400 transition">+63 966 261 2676</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-3 p-3.5 bg-brand-dark/60 rounded-2xl border border-brand-border">
+                                    <div class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-brands fa-viber"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-brand-textMuted text-[10px]">Viber</span>
+                                        <a href="viber://chat?number=%2B639662612676" class="font-semibold text-white hover:text-purple-400 transition">+63 966 261 2676</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-3 p-3.5 bg-brand-dark/60 rounded-2xl border border-brand-border">
+                                    <div class="w-9 h-9 rounded-xl bg-brand-lavender/10 text-brand-lavender flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-brand-textMuted text-[10px]">Location & Setup</span>
+                                        <span class="font-semibold text-white">Quezon City, PH (Dual ISP + UPS)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-brand-dark/80 rounded-2xl border border-brand-border text-xs text-brand-pinkLight text-center">
+                            <strong class="block text-white mb-1">Work From Home Redundancy:</strong>
+                            Fiber internet + backup mobile hotspot | UPS battery backup | Distraction-free home office setup.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- DETAILED CASE VIEW AUDIT MODAL -->
+    <div id="case-modal" class="fixed inset-0 bg-brand-dark/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-brand-card rounded-3xl border border-brand-border max-w-lg w-full p-6 space-y-4 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white font-bold text-xl">&times;</button>
+            <div class="flex items-center space-x-2">
+                <span id="modal-case-id" class="px-2.5 py-1 bg-brand-pink/10 text-brand-pink border border-brand-pink/20 font-bold text-xs rounded-full">CAS-1000</span>
+                <span id="modal-status" class="px-2.5 py-1 text-xs font-bold rounded-full">Met</span>
+            </div>
+            
+            <h3 class="font-bold text-white text-base" id="modal-category">Category Title</h3>
+            
+            <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 bg-brand-dark/60 p-4 rounded-2xl border border-brand-border">
+                <div><strong>Channel:</strong> <span id="modal-channel">Live Chat</span></div>
+                <div><strong>QA Score:</strong> <span id="modal-qa">100%</span></div>
+                <div><strong>Inbound:</strong> <span id="modal-time-in">2026-08-25</span></div>
+                <div><strong>Resolved:</strong> <span id="modal-time-out">2026-08-25</span></div>
+                <div><strong>Resolution Time:</strong> <span id="modal-res-time">1.25 Hrs</span></div>
+                <div><strong>SLA Target:</strong> <span id="modal-sla-target">2.0 Hrs</span></div>
+            </div>
+
+            <div>
+                <strong class="text-xs text-white block mb-1">Root Cause & Investigation Notes:</strong>
+                <p id="modal-notes" class="text-xs text-slate-300 bg-brand-dark p-3.5 rounded-xl border border-brand-border leading-relaxed">
+                    Notes go here...
+                </p>
+            </div>
+
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="px-5 py-2.5 text-xs font-semibold bg-brand-pink text-brand-dark hover:bg-brand-pinkLight rounded-xl transition">
+                    Close Case Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 text-xs py-8 border-t border-brand-border/60 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="text-slate-300 font-medium">Ma. Margarita Kathrina Delatina &copy; 2026 | E-Commerce Operations, Risk & Data Portfolio</p>
+            <p class="text-slate-500 text-[11px]">Built with HTML5, Tailwind CSS, Chart.js & Vanilla JavaScript | No SVG / No Mermaid JS</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mock Operations Dataset (15 Records)
+        const mockData = [
+            { caseId: "CAS-1001", channel: "Live Chat", category: "Account Access", timeIn: "2026-08-25 08:00", timeOut: "2026-08-25 09:15", resTime: 1.25, slaTarget: 2.0, status: "Met", qaScore: 100, notes: "2FA reset verified via identity security check." },
+            { caseId: "CAS-1002", channel: "CRM Ticket", category: "Dispute Resolution", timeIn: "2026-08-25 08:30", timeOut: "2026-08-25 11:45", resTime: 3.25, slaTarget: 4.0, status: "Met", qaScore: 100, notes: "P2P escrow payment release verified; proof of payment attached." },
+            { caseId: "CAS-1003", channel: "Email", category: "Compliance Review", timeIn: "2026-08-24 09:00", timeOut: "2026-08-25 10:00", resTime: 25.00, slaTarget: 24.0, status: "Breached", qaScore: 95, notes: "KYC verification delayed due to unreadable ID document upload." },
+            { caseId: "CAS-1004", channel: "Live Chat", category: "Data Update", timeIn: "2026-08-25 09:10", timeOut: "2026-08-25 10:30", resTime: 1.33, slaTarget: 8.0, status: "Met", qaScore: 100, notes: "Updated user mailing address following privacy validation protocol." },
+            { caseId: "CAS-1005", channel: "Internal Escalation", category: "Compliance Review", timeIn: "2026-08-25 09:30", timeOut: "2026-08-25 13:00", resTime: 3.50, slaTarget: 24.0, status: "Met", qaScore: 100, notes: "AML risk flag reviewed; cleared after source of funds verification." },
+            { caseId: "CAS-1006", channel: "CRM Ticket", category: "Dispute Resolution", timeIn: "2026-08-25 10:00", timeOut: "2026-08-25 13:30", resTime: 3.50, slaTarget: 4.0, status: "Met", qaScore: 98, notes: "Reconciled merchant refund logs against billing logs." },
+            { caseId: "CAS-1007", channel: "Live Chat", category: "Account Access", timeIn: "2026-08-25 10:15", timeOut: "2026-08-25 11:00", resTime: 0.75, slaTarget: 2.0, status: "Met", qaScore: 100, notes: "Unlocked account following failed password attempt lockout." },
+            { caseId: "CAS-1008", channel: "Email", category: "Data Update", timeIn: "2026-08-25 10:45", timeOut: "2026-08-25 14:15", resTime: 3.50, slaTarget: 8.0, status: "Met", qaScore: 100, notes: "Batch record update performed across backend CRM database." },
+            { caseId: "CAS-1009", channel: "Internal Escalation", category: "Dispute Resolution", timeIn: "2026-08-25 11:00", timeOut: "2026-08-25 13:30", resTime: 2.50, slaTarget: 4.0, status: "Met", qaScore: 100, notes: "Resolved P2P trade pricing discrepancy via audit trail investigation." },
+            { caseId: "CAS-1010", channel: "CRM Ticket", category: "Compliance Review", timeIn: "2026-08-25 11:30", timeOut: "2026-08-25 16:00", resTime: 4.50, slaTarget: 24.0, status: "Met", qaScore: 100, notes: "HIPAA record masking audit completed with zero exceptions." },
+            { caseId: "CAS-1011", channel: "Live Chat", category: "Account Access", timeIn: "2026-08-25 12:00", timeOut: "2026-08-25 13:15", resTime: 1.25, slaTarget: 2.0, status: "Met", qaScore: 100, notes: "Updated multi-factor authentication device for enterprise user." },
+            { caseId: "CAS-1012", channel: "Email", category: "Dispute Resolution", timeIn: "2026-08-25 13:00", timeOut: "2026-08-25 16:15", resTime: 3.25, slaTarget: 4.0, status: "Met", qaScore: 100, notes: "Customer chargeback request resolved via payment gateway logs." },
+            { caseId: "CAS-1013", channel: "Live Chat", category: "Account Access", timeIn: "2026-08-25 13:30", timeOut: "2026-08-25 14:45", resTime: 1.25, slaTarget: 2.0, status: "Met", qaScore: 100, notes: "Issued temp login token after identity verification call." },
+            { caseId: "CAS-1014", channel: "CRM Ticket", category: "Data Update", timeIn: "2026-08-25 14:00", timeOut: "2026-08-25 17:30", resTime: 3.50, slaTarget: 8.0, status: "Met", qaScore: 100, notes: "Corrected billing address and updated tax exemption profile." },
+            { caseId: "CAS-1015", channel: "Internal Escalation", category: "Compliance Review", timeIn: "2026-08-25 14:30", timeOut: "2026-08-25 17:00", resTime: 2.50, slaTarget: 24.0, status: "Met", qaScore: 100, notes: "GDPR data deletion request verified and executed." }
+        ];
+
+        // Simulated Chat Dialogues Database
+        const chatScenarios = {
+            wismo: {
+                title: "Scenario 1: WISMO / Delayed Courier Shipment",
+                subtitle: "Customer Sentiment: Frustrated \u2192 De-escalated & Reassured",
+                messages: [
+                    { sender: "user", time: "10:14 AM", text: "Where is my order #ORD-98211?? It was supposed to be delivered yesterday and tracking hasn't updated in 3 days! This is ridiculous." },
+                    { sender: "agent", time: "10:14 AM", text: "Hello! I completely understand how concerning it is when a shipment is delayed, especially when you're expecting it. Let me look into order #ORD-98211 right now for you." },
+                    { sender: "agent", time: "10:15 AM", text: "I've just checked with our carrier log. It looks like the package experienced a 24-hour weather delay at the regional hub, but it is currently on the delivery vehicle in transit to your address today before 4:00 PM." },
+                    { sender: "user", time: "10:16 AM", text: "Oh okay, thank you for checking so fast! I was worried it was lost." },
+                    { sender: "agent", time: "10:16 AM", text: "You're very welcome! I've placed a personal monitor tag on this tracking ID and emailed you a direct link. I'll personally verify once it marks as delivered!" }
+                ]
+            },
+            refund: {
+                title: "Scenario 2: Damaged Product / Replacement Triage",
+                subtitle: "Customer Sentiment: Upset \u2192 Delighted with Instant Resolution",
+                messages: [
+                    { sender: "user", time: "11:02 AM", text: "My order arrived today but the bottle inside was cracked and leaking everywhere! I need a full refund or a new one right now." },
+                    { sender: "agent", time: "11:02 AM", text: "I am so sorry to hear that your order arrived damaged! That is certainly not the experience we want you to have. Please don't worry, I will make this right immediately." },
+                    { sender: "agent", time: "11:03 AM", text: "I have just issued an expedited priority replacement order (#REP-4409) at zero cost to you, with 1-day express delivery. No need to ship the damaged item back." },
+                    { sender: "user", time: "11:04 AM", text: "Wow, that was super fast. Thank you so much Marga, really appreciate the quick help!" }
+                ]
+            },
+            sub: {
+                title: "Scenario 3: Subscription Retention & Discount Offer",
+                subtitle: "Customer Sentiment: At-Risk Cancellation \u2192 Retained Subscriber",
+                messages: [
+                    { sender: "user", time: "01:20 PM", text: "I want to cancel my monthly replenishment subscription. It's getting too expensive for me right now." },
+                    { sender: "agent", time: "01:21 PM", text: "I completely understand wanting to adjust your budget! We value having you with us. Before I process the cancellation, would it help if we paused your shipments for 30 days or applied a 25% discount to your next 3 boxes?" },
+                    { sender: "user", time: "01:22 PM", text: "A 25% discount actually helps a lot. Can we do that and skip next month?" },
+                    { sender: "agent", time: "01:23 PM", text: "Done! I've updated your next delivery date to October 1st with the 25% discount applied. Thank you for staying with us!" }
+                ]
+            },
+            escrow: {
+                title: "Scenario 4: Escrow Dispute & KYC Identity Verification",
+                subtitle: "Customer Sentiment: Anxious \u2192 Secure & Verified",
+                messages: [
+                    { sender: "user", time: "02:45 PM", text: "Why is my $1,200 payment release frozen in escrow? The seller says they completed the transfer!" },
+                    { sender: "agent", time: "02:46 PM", text: "Hello! I understand your concern regarding the transaction freeze. As part of our FinTech security protocols, transactions exceeding $1,000 require a quick one-time KYC verification to protect both parties." },
+                    { sender: "agent", time: "02:47 PM", text: "I've sent a secure encrypted link to your registered email. Once you upload your ID, our system verifies it within 10 minutes and automatically releases the escrow funds." },
+                    { sender: "user", time: "02:50 PM", text: "Just uploaded my ID on the secure link. Could you check?" },
+                    { sender: "agent", time: "02:51 PM", text: "Identity verified! The $1,200 escrow funds have now been released to your account wallet. Thank you for your cooperation!" }
+                ]
+            }
+        };
+
+        let filteredData = [...mockData];
+        let categoryChartInstance = null;
+        let channelChartInstance = null;
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTable(filteredData);
+            initCharts(filteredData);
+            updateKPIs(filteredData);
+            switchChatScenario('wismo');
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Table Render Function
+        function renderTable(data) {
+            const tbody = document.getElementById('data-table-body');
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" class="p-6 text-center text-slate-400 italic">No matching records found. Please adjust your filters.</td></tr>`;
+                document.getElementById('table-record-count').innerText = `Showing 0 of ${mockData.length} records`;
+                return;
+            }
+
+            data.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-brand-cardHover cursor-pointer transition border-b border-brand-border/60";
+                tr.onclick = () => showModal(item);
+
+                const statusBadge = item.status === 'Met' 
+                    ? `<span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold rounded text-[10px]">Met</span>`
+                    : `<span class="px-2 py-0.5 bg-rose-500/10 text-rose-400 border border-rose-500/20 font-bold rounded text-[10px]">Breached</span>`;
+
+                tr.innerHTML = `
+                    <td class="p-3.5 font-mono font-bold text-brand-pink">${item.caseId}</td>
+                    <td class="p-3.5 text-slate-300">${item.channel}</td>
+                    <td class="p-3.5 font-medium text-white">${item.category}</td>
+                    <td class="p-3.5 text-slate-400 text-[11px]">${item.timeIn}</td>
+                    <td class="p-3.5 font-semibold text-slate-200">${item.resTime} Hrs</td>
+                    <td class="p-3.5 text-slate-400 text-[11px]">${item.slaTarget} Hrs</td>
+                    <td class="p-3.5">${statusBadge}</td>
+                    <td class="p-3.5 font-semibold text-brand-pinkLight">${item.qaScore}%</td>
+                    <td class="p-3.5 text-slate-300 max-w-xs truncate text-[11px]" title="${item.notes}">${item.notes}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('table-record-count').innerText = `Showing ${data.length} of ${mockData.length} case records`;
+        }
+
+        // Apply Data Table Filters
+        function applyFilters() {
+            const channel = document.getElementById('filter-channel').value;
+            const category = document.getElementById('filter-category').value;
+            const status = document.getElementById('filter-status').value;
+            const search = document.getElementById('filter-search').value.toLowerCase();
+
+            filteredData = mockData.filter(item => {
+                const matchChannel = (channel === 'ALL' || item.channel === channel);
+                const matchCategory = (category === 'ALL' || item.category === category);
+                const matchStatus = (status === 'ALL' || item.status === status);
+                const matchSearch = item.caseId.toLowerCase().includes(search) || 
+                                    item.notes.toLowerCase().includes(search) ||
+                                    item.category.toLowerCase().includes(search);
+
+                return matchChannel && matchCategory && matchStatus && matchSearch;
+            });
+
+            renderTable(filteredData);
+            updateKPIs(filteredData);
+            updateCharts(filteredData);
+        }
+
+        function resetTableFilters() {
+            document.getElementById('filter-channel').value = 'ALL';
+            document.getElementById('filter-category').value = 'ALL';
+            document.getElementById('filter-status').value = 'ALL';
+            document.getElementById('filter-search').value = '';
+            applyFilters();
+        }
+
+        // Dynamic KPI Card Updates
+        function updateKPIs(data) {
+            document.getElementById('kpi-total-cases').innerText = data.length;
+            
+            if (data.length === 0) {
+                document.getElementById('kpi-sla-rate').innerText = "0.0%";
+                document.getElementById('kpi-avg-qa').innerText = "0.0%";
+                document.getElementById('kpi-avg-res').innerText = "0.00 Hrs";
+                return;
+            }
+
+            const metCount = data.filter(d => d.status === 'Met').length;
+            const slaRate = ((metCount / data.length) * 100).toFixed(1);
+            document.getElementById('kpi-sla-rate').innerText = `${slaRate}%`;
+
+            const sumQA = data.reduce((acc, d) => acc + d.qaScore, 0);
+            const avgQA = (sumQA / data.length).toFixed(1);
+            document.getElementById('kpi-avg-qa').innerText = `${avgQA}%`;
+
+            const sumRes = data.reduce((acc, d) => acc + d.resTime, 0);
+            const avgRes = (sumRes / data.length).toFixed(2);
+            document.getElementById('kpi-avg-res').innerText = `${avgRes} Hrs`;
+        }
+
+        // Chart.js Visualizations Setup
+        function initCharts(data) {
+            Chart.defaults.color = '#94a3b8';
+            Chart.defaults.font.family = 'Inter';
+
+            // Category Chart
+            const ctxCat = document.getElementById('categoryChart').getContext('2d');
+            categoryChartInstance = new Chart(ctxCat, {
+                type: 'bar',
+                data: getCategoryChartData(data),
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 }, color: '#f1f5f9' } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.raw} Hours`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { ticks: { font: { size: 10 }, color: '#94a3b8' }, grid: { color: '#2e2544' } },
+                        y: { beginAtZero: true, title: { display: true, text: 'Hours', color: '#94a3b8' }, ticks: { color: '#94a3b8' }, grid: { color: '#2e2544' } }
+                    }
+                }
+            });
+
+            // Channel Chart
+            const ctxChan = document.getElementById('channelChart').getContext('2d');
+            channelChartInstance = new Chart(ctxChan, {
+                type: 'bar',
+                data: getChannelChartData(data),
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 }, color: '#f1f5f9' } }
+                    },
+                    scales: {
+                        x: { stacked: true, ticks: { font: { size: 10 }, color: '#94a3b8' }, grid: { color: '#2e2544' } },
+                        y: { stacked: true, beginAtZero: true, ticks: { precision: 0, color: '#94a3b8' }, grid: { color: '#2e2544' } }
+                    }
+                }
+            });
+        }
+
+        function updateCharts(data) {
+            if (categoryChartInstance && channelChartInstance) {
+                categoryChartInstance.data = getCategoryChartData(data);
+                categoryChartInstance.update();
+
+                channelChartInstance.data = getChannelChartData(data);
+                channelChartInstance.update();
+            }
+        }
+
+        function getCategoryChartData(data) {
+            const categories = ["Account Access", "Dispute Resolution", "Compliance Review", "Data Update"];
+            const avgResTimes = categories.map(cat => {
+                const items = data.filter(d => d.category === cat);
+                if (items.length === 0) return 0;
+                return (items.reduce((acc, d) => acc + d.resTime, 0) / items.length).toFixed(2);
+            });
+            const slaTargets = [2.0, 4.0, 24.0, 8.0];
+
+            return {
+                labels: ["Account Access", "Dispute Res.", "Compliance", "Data Update"],
+                datasets: [
+                    {
+                        label: 'Avg Res Time (Hrs)',
+                        data: avgResTimes,
+                        backgroundColor: '#f472b6',
+                        borderRadius: 6
+                    },
+                    {
+                        label: 'SLA Target (Hrs)',
+                        data: slaTargets,
+                        backgroundColor: '#2e2544',
+                        borderRadius: 6
+                    }
+                ]
+            };
+        }
+
+        function getChannelChartData(data) {
+            const channels = ["Live Chat", "CRM Ticket", "Email", "Internal Escalation"];
+            const metCounts = channels.map(ch => data.filter(d => d.channel === ch && d.status === 'Met').length);
+            const breachedCounts = channels.map(ch => data.filter(d => d.channel === ch && d.status === 'Breached').length);
+
+            return {
+                labels: ["Live Chat", "CRM Ticket", "Email", "Internal Escalation"],
+                datasets: [
+                    {
+                        label: 'SLA Met',
+                        data: metCounts,
+                        backgroundColor: '#34d399'
+                    },
+                    {
+                        label: 'SLA Breached',
+                        data: breachedCounts,
+                        backgroundColor: '#f43f5e'
+                    }
+                ]
+            };
+        }
+
+        // Chat Simulator Switcher
+        function switchChatScenario(key) {
+            const scenario = chatScenarios[key];
+            if (!scenario) return;
+
+            document.getElementById('chat-scenario-title').innerText = scenario.title;
+            document.getElementById('chat-scenario-subtitle').innerText = scenario.subtitle;
+
+            const container = document.getElementById('chat-message-container');
+            container.innerHTML = '';
+
+            scenario.messages.forEach(msg => {
+                const div = document.createElement('div');
+                if (msg.sender === 'user') {
+                    div.className = "flex justify-start gap-2.5 max-w-[85%]";
+                    div.innerHTML = `
+                        <div class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">CU</div>
+                        <div class="chat-bubble-user p-3.5 rounded-2xl rounded-tl-none">
+                            <div class="flex items-center justify-between gap-3 mb-1">
+                                <span class="font-bold text-xs text-slate-200">Customer</span>
+                                <span class="text-[10px] text-slate-400 font-mono">${msg.time}</span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">${msg.text}</p>
+                        </div>
+                    `;
+                } else {
+                    div.className = "flex justify-end gap-2.5 max-w-[85%] ml-auto";
+                    div.innerHTML = `
+                        <div class="chat-bubble-agent p-3.5 rounded-2xl rounded-tr-none">
+                            <div class="flex items-center justify-between gap-3 mb-1">
+                                <span class="font-bold text-xs text-brand-pink">Marga (CX Specialist)</span>
+                                <span class="text-[10px] text-brand-pinkLight/70 font-mono">${msg.time}</span>
+                            </div>
+                            <p class="text-xs text-slate-200 leading-relaxed">${msg.text}</p>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-pink to-brand-lavender text-brand-dark font-bold text-xs flex items-center justify-center shrink-0">MD</div>
+                    `;
+                }
+                container.appendChild(div);
+            });
+
+            // Update Tab active styling
+            document.querySelectorAll('.chat-scenario-btn').forEach(btn => {
+                btn.className = "chat-scenario-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-brand-card text-slate-300 border border-brand-border hover:border-brand-pink transition flex items-center gap-2";
+            });
+            const activeBtn = document.getElementById(`chat-tab-${key}`);
+            if (activeBtn) {
+                activeBtn.className = "chat-scenario-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-brand-pink text-brand-dark shadow-md transition flex items-center gap-2";
+            }
+        }
+
+        // Recruiter Pitch Toggle
+        function togglePitch(type) {
+            document.getElementById('pitch-cx').classList.add('hidden');
+            document.getElementById('pitch-ts').classList.add('hidden');
+            document.getElementById('pitch-ea').classList.add('hidden');
+
+            document.getElementById('btn-pitch-cx').className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-dark text-slate-300 border border-brand-border hover:border-brand-pink transition";
+            document.getElementById('btn-pitch-ts').className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-dark text-slate-300 border border-brand-border hover:border-brand-pink transition";
+            document.getElementById('btn-pitch-ea').className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-dark text-slate-300 border border-brand-border hover:border-brand-pink transition";
+
+            if (type === 'cx') {
+                document.getElementById('pitch-cx').classList.remove('hidden');
+                document.getElementById('btn-pitch-cx').className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-pink text-brand-dark shadow-md transition";
+            } else if (type === 'ts') {
+                document.getElementById('pitch-ts').classList.remove('hidden');
+                document.getElementById('btn-pitch-ts').className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-pink text-brand-dark shadow-md transition";
+            } else {
+                document.getElementById('pitch-ea').classList.remove('hidden');
+                document.getElementById('btn-pitch-ea').className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-brand-pink text-brand-dark shadow-md transition";
+            }
+        }
+
+        // Modal Functions
+        function showModal(item) {
+            document.getElementById('modal-case-id').innerText = item.caseId;
+            document.getElementById('modal-category').innerText = item.category;
+            document.getElementById('modal-channel').innerText = item.channel;
+            document.getElementById('modal-qa').innerText = `${item.qaScore}%`;
+            document.getElementById('modal-time-in').innerText = item.timeIn;
+            document.getElementById('modal-time-out').innerText = item.timeOut;
+            document.getElementById('modal-res-time').innerText = `${item.resTime} Hrs`;
+            document.getElementById('modal-sla-target').innerText = `${item.slaTarget} Hrs`;
+            document.getElementById('modal-notes').innerText = item.notes;
+
+            const modalStatus = document.getElementById('modal-status');
+            if (item.status === 'Met') {
+                modalStatus.innerText = 'SLA Met';
+                modalStatus.className = 'px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold text-xs rounded-full';
+            } else {
+                modalStatus.innerText = 'SLA Breached';
+                modalStatus.className = 'px-2.5 py-1 bg-rose-500/10 text-rose-400 border border-rose-500/20 font-bold text-xs rounded-full';
+            }
+
+            document.getElementById('case-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('case-modal').classList.add('hidden');
+        }
+
+        // Copy Code Snippet Helper
+        function copyCode(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('SQL snippet copied to clipboard!');
+            });
+        }
+
+        // Copy CSV Dataset Helper
+        function copyDatasetCSV() {
+            const headers = ["Case ID", "Channel", "Category", "Timestamp In", "Timestamp Resolved", "Resolution Time (Hrs)", "SLA Target (Hrs)", "SLA Status", "QA Score (%)", "Root Cause Notes"];
+            const csvRows = [headers.join(",")];
+
+            mockData.forEach(item => {
+                const row = [
+                    item.caseId,
+                    `"${item.channel}"`,
+                    `"${item.category}"`,
+                    `"${item.timeIn}"`,
+                    `"${item.timeOut}"`,
+                    item.resTime,
+                    item.slaTarget,
+                    item.status,
+                    `${item.qaScore}%`,
+                    `"${item.notes.replace(/"/g, '""')}"`
+                ];
+                csvRows.push(row.join(","));
+            });
+
+            navigator.clipboard.writeText(csvRows.join("\n")).then(() => {
+                alert('Mock operations dataset CSV copied to clipboard! You can paste it directly into Excel or Google Sheets.');
+            });
+        }
+    </script>
+</body>
+</html>
